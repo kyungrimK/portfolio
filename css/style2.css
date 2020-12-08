@@ -602,13 +602,13 @@ input[type=submit] {
   
 
 button {
-	margin-top: 6.5%;
-	margin-left: 5%;
+	margin-top: 10%;
+	margin-left: 5.5%;
 	z-index: 99;
 	width: 200px;
 	height: 5vh;
-	background: #202020;
-	border: 1px #202020;;
+	background: #FFD100;
+	border: 1px #FFD100;;
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
@@ -918,7 +918,7 @@ button {
 
 	button {
 		margin-top: 34%;
-		margin-left: 5%;
+		margin-left: 5.5%;
 		width: 10px;
 		height: 3vh;
 		padding: 0 30px;
