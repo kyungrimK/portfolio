@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/svg" href="img/blob.png"/>
+        <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
+        <title>Project</title>
+    </head>
+    <body>
+      <a class="skip-to-content-link" href="#main">Skip to content</a>
+        <header class="hcontainer">
+            <nav class="shadow">
+                <input id="navbox" type="checkbox" class="icon-burger">
+                <label for="navbox" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <h9>menu</h9>
+                </label>
+                <a href="index.html" class="logoimg">KYUNGRIM<strong> KIM</strong></a>
+                <ul class="links"> 
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="nav_active" href="projects.html">Projects</a></li>
+                    <li><a href="story.html">My Story</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main" class="mcontainer">
+            <div class="gallery">
+                <div><h1>Projects</h1></div>
+                <div><p>I love to take photos wherever I go</p></div>
+                <div class="fgallery">
+                    <div class="flip-card" onclick="flip(event)">
+                      <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <div class="i image4"></div>
+                        <div class="de">
+                            <br>
+                            <h2>Big Car</h2>
+                            <br>
+                            <p>I worked here as a Graphic and UX Designer</p>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <br><br><br><br><br>
+                        <p><a href="https://www.kyungrim.com/bigcar" target="_blank">Click to See My Work!</a></p>
+                        <br>
+                          <i><a href="https://www.kyungrim.com/bigcar" target="_blank"><img src="img/web-link.png" alt="Big Car"></a></i>
+                      </div>
+                    </div>
+                  </div>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <div class="i image5"></div>
+                            <div class="de">
+                              <br>
+                              <h2>KDSI</h2>
+                              <br>
+                              <p>I worked here as a brand graphix Designer</p>
+                            </div>
+                          </div>
+                          <div class="flip-card-back">
+                            <br><br><br><br><br>
+                            <p><a href="https://www.kyungrim.com/kdsi" target="_blank">Click to See My Work!</a></p>
+                        <br>
+                            <i><a href="https://www.kyungrim.com/kdsi" target="_blank"><img src="img/web-link.png" alt="KDSI"></a></i> 
+                          </div>
+                        </div>
+                      </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <div class="i image6"></div>
+                            <div class="de">
+                                <br>
+                                <h2>Paintings</h2>
+                                <br>
+                                <p>My drawings and other works</p>
+                            </div>
+                          </div>
+                          <div class="flip-card-back">
+                            <br><br><br><br><br>
+                            <p><a href="https://www.kyungrim.com/other-works" target="_blank">Click to See My Work!</a></p>
+                        <br>
+                            <i><a href="https://www.kyungrim.com/other-works" target="_blank"><img src="img/web-link.png" alt="Others"></a></i> 
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+        </main>
+        <script>
+          function flip(event){
+            var element = event.currentTarget;
+            if (element.className === "flip-card-front") {
+              if(element.style.transform == "rotateY(180deg)") {
+                element.style.transform = "rotateY(0deg)";}
+              else {element.style.transform = "rotateY(180deg)";}}};
+        </script>
+        <footer class="fcontainer">
+            <p>&#169; 2020 Kyungrim Kim Portfolio</p>
+        </footer>
+    <script scr="js/projects.js"></script>
+    </body>
+</html>
+
+
+
