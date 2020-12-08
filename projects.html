@@ -22,8 +22,8 @@
       <a class="skip-to-content-link" href="#main">Skip to content</a>
         <header class="hcontainer">
             <nav class="shadow">
-                <input id="navbox" type="checkbox" class="icon-burger">
-                <label for="navbox" class="icon-burger">
+                <input id="navbox" type="checkbox" class="icon">
+                <label for="navbox" class="icon">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
@@ -41,11 +41,11 @@
         <main id="main" class="mcontainer">
             <div class="gallery">
                 <div><h1>Projects</h1></div>
-                <div><p>I love to take photos wherever I go</p></div>
+                <div><p>Internships, Art and Design, and Others</p></div>
                 <div class="fgallery">
-                    <div class="flip-card" onclick="flip(event)">
-                      <div class="flip-card-inner">
-                      <div class="flip-card-front">
+                    <div class="flipcard" onclick="flip(event)">
+                      <div class="inner">
+                      <div class="front">
                         <div class="i image4"></div>
                         <div class="de">
                             <br>
@@ -54,7 +54,7 @@
                             <p>I worked here as a Graphic and UX Designer</p>
                         </div>
                       </div>
-                      <div class="flip-card-back">
+                      <div class="back">
                         <br><br><br><br><br>
                         <p><a href="https://www.kyungrim.com/bigcar" target="_blank">Click to See My Work!</a></p>
                         <br>
@@ -62,9 +62,9 @@
                       </div>
                     </div>
                   </div>
-                      <div class="flip-card">
-                        <div class="flip-card-inner">
-                          <div class="flip-card-front">
+                      <div class="flipcard">
+                        <div class="inner">
+                          <div class="front">
                             <div class="i image5"></div>
                             <div class="de">
                               <br>
@@ -73,7 +73,7 @@
                               <p>I worked here as a brand graphix Designer</p>
                             </div>
                           </div>
-                          <div class="flip-card-back">
+                          <div class="back">
                             <br><br><br><br><br>
                             <p><a href="https://www.kyungrim.com/kdsi" target="_blank">Click to See My Work!</a></p>
                         <br>
@@ -81,9 +81,9 @@
                           </div>
                         </div>
                       </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                          <div class="flip-card-front">
+                    <div class="flipcard">
+                        <div class="inner">
+                          <div class="front">
                             <div class="i image6"></div>
                             <div class="de">
                                 <br>
@@ -92,7 +92,7 @@
                                 <p>My drawings and other works</p>
                             </div>
                           </div>
-                          <div class="flip-card-back">
+                          <div class="back">
                             <br><br><br><br><br>
                             <p><a href="https://www.kyungrim.com/other-works" target="_blank">Click to See My Work!</a></p>
                         <br>
@@ -107,7 +107,7 @@
         <script>
           function flip(event){
             var element = event.currentTarget;
-            if (element.className === "flip-card-front") {
+            if (element.className === "front") {
               if(element.style.transform == "rotateY(180deg)") {
                 element.style.transform = "rotateY(0deg)";}
               else {element.style.transform = "rotateY(180deg)";}}};

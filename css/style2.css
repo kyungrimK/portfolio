@@ -132,7 +132,7 @@ nav .links .nav_active {
 	top: -100px;
 }
 
-nav .icon-burger {
+nav .icon {
 	display: none;
 	position: absolute;
 	right: 5%;
@@ -140,7 +140,7 @@ nav .icon-burger {
 	transform: translateY(-50%);
 }
 
-nav .icon-burger .line {
+nav .icon .line {
 	width: 30px;
 	height: 5px;
 	background-color: #202020;
@@ -206,6 +206,12 @@ strong {
 	padding-top: 10px;
 }
 
+.last p {
+	padding-right: 30%;
+    padding-top: 2%;
+    line-height: 20px;
+}
+
 .btn {
 	position: absolute;
 	border: 3px solid #202020;
@@ -228,14 +234,14 @@ strong {
 }
 
 /*projects.html*/
-.flip-card {
+.flipcard {
 	background-color: transparent;
 	height:30em;
 	width:26em;
 	perspective: 1000px; 
 }
 
-.flip-card-inner {
+.inner {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -244,18 +250,18 @@ strong {
 	transform-style: preserve-3d;
 }
   
-.flip-card:hover .flip-card-inner {
+.flipcard:hover .inner {
 	transform: rotateY(-180deg);
 }
   
-.flip-card-front, .flip-card-back {
+.front, .back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
 }
   
-.flip-card-front {
+.front {
 	background-color: #fff;
 	color: #fff;
 	display: flex;
@@ -291,12 +297,12 @@ strong {
 	padding-top: 0;
 }
 
-.flip-card-back a{
+.back a{
 	text-decoration: none;
 	color: #fff;
 }
   
-.flip-card-back {
+.back {
 	background-color: #202020;
 	transform: rotateY(180deg);
 	border-radius: 16px;
@@ -343,7 +349,7 @@ i img {
 	margin-top: 23%;
 }
 
-.flip-card-back p {
+.back p {
 	color: #fff;
 }
 
@@ -403,6 +409,7 @@ i img {
 
 .gallerydescription p {
 	padding-top: 0;
+	line-height: 20px;
 }
 
 .gallerycard:hover .gallerydescription{
@@ -561,7 +568,9 @@ input[type=submit] {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 15vh auto;
+	background-image: url(/img/friends.jpg);
 }
+
 
 .storygallery h1 {
 	text-align: center;
@@ -584,6 +593,11 @@ input[type=submit] {
 	vertical-align: middle;
 	width: 100%;
 	padding-bottom: 2%;
+	filter: grayscale(100%);
+}
+
+.column img:hover {
+	filter: grayscale(0%)
 }
   
 
@@ -614,7 +628,7 @@ button {
 		height: auto;
 	}
 
-	.flip-card-front {
+	.front {
 		flex-direction: row;
 	}
 
@@ -622,7 +636,7 @@ button {
 		display: none;
 	}
 
-	.flip-card {
+	.flipcard {
 		height: 7em;
 		width: 20em;
 		margin: 2%;
@@ -664,6 +678,11 @@ button {
 
 	}
 
+	.gallery p{
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
 	.galleryimage {
 		height: 7em;
 		width: 40em;
@@ -672,6 +691,10 @@ button {
 	.gallerydescription {
 		height: 6em;
 		width: 28em;
+	}
+
+	.column img {
+		filter: grayscale(0%);
 	}
 
 	nav input[type="checkbox"] {
@@ -763,9 +786,10 @@ button {
 	}
 
 	.last p{
-		font-size: 3vmin;
+		font-size: 3.5vmin;
 		margin-left: -10%;
 		padding-top: 3%;
+		padding-right: 50%;
 	}
 
   	.column {
@@ -813,19 +837,19 @@ button {
 		bottom: 0;
 	}
 
-	nav .icon-burger {
+	nav .icon {
 		display: block;
 	}
 
-	nav :checked ~ .icon-burger .line:nth-child(1) {
+	nav :checked ~ .icon .line:nth-child(1) {
 		transform: translateY(10px) rotate(225deg);
 	}
 
-	nav :checked ~ .icon-burger .line:nth-child(3) {
+	nav :checked ~ .icon .line:nth-child(3) {
 		transform: translateY(-10px) rotate(-225deg);
 	}
 
-	nav :checked ~ .icon-burger .line:nth-child(2) {
+	nav :checked ~ .icon .line:nth-child(2) {
 		opacity: 0;
 	}
 
@@ -916,9 +940,9 @@ button {
 
 @keyframes move1 {
     0%   { transform: scale(0.7)   translate(10px, -30px); }
-    38%  { transform: scale(0.5, 0.7) translate(80vw, 30vh) rotate(160deg); }
-    40%  { transform: scale(0.5, 0.7) translate(80vw, 30vh) rotate(160deg); }
-    78%  { transform: scale(1.0) translate(0vw, 50vh) rotate(-20deg); }
+    35%  { transform: scale(0.5, 0.7) translate(80vw, 30vh) rotate(160deg); }
+    48%  { transform: scale(0.5, 0.7) translate(80vw, 30vh) rotate(160deg); }
+    75%  { transform: scale(1.0) translate(0vw, 50vh) rotate(-20deg); }
     80%  { transform: scale(1.0) translate(0vw, 50vh) rotate(-20deg); }
     100% { transform: scale(0.7)   translate(10px, -30px); }
 }
@@ -930,15 +954,15 @@ button {
     width: 50vmax;
     z-index: -1;
     animation: move2 10s ease-in-out infinite;
-    transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 }
 
 @keyframes move2 {
     0%   { transform: scale(0.6)   translate(30px, 0px); }
-    38%  { transform: scale(0.3, 0.5) translate(-104px,147px) rotate(160deg); }
-    40%  { transform: scale(0.3, 0.5) translate(-104px,147px) rotate(160deg); }
+    42%  { transform: scale(0.3, 0.5) translate(-104px,147px) rotate(160deg); }
+    44%  { transform: scale(0.3, 0.5) translate(-104px,147px) rotate(160deg); }
     78%  { transform: scale(0.8) translate(-172px,-82px) rotate(-20deg); }
-    80%  { transform: scale(0.8) translate(-172px,-82px) rotate(-20deg); }
+    87%  { transform: scale(0.8) translate(-172px,-82px) rotate(-20deg); }
     100% { transform: scale(0.6)   translate(30px, 0px); }
 }
 
@@ -954,10 +978,10 @@ button {
 
 @keyframes move3 {
     0%   { transform: scale(0.6)   translate(300px,-104px); }
-    38%  { transform: scale(0.7, 0.7) translate(100vw,-10vh) rotate(100deg); }
     40%  { transform: scale(0.7, 0.7) translate(100vw,-10vh) rotate(100deg); }
-    78%  { transform: scale(0.6) translate(80vw,-20vh); }
-    80%  { transform: scale(0.6) translate(80vw,-20vh); }
+    45%  { transform: scale(0.7, 0.7) translate(100vw,-10vh) rotate(100deg); }
+    72%  { transform: scale(0.6) translate(80vw,-20vh); }
+    83%  { transform: scale(0.6) translate(80vw,-20vh); }
     100% { transform: scale(0.6)   translate(300px,-104px); }
 }
 
