@@ -52,10 +52,22 @@ h3 {
 }
 
 .skip-to-content-link {
+	border: 1px solid rgba(0,0,0,.15);
 	left: 50%;
+	padding: 4px;
 	position: absolute;
-	transform: translateY(-100%);
-  }
+	top: 30px;
+	color: #F4EBFF;
+    z-index: 1;
+	background: #202020;
+	font-size: 1.5vmin;
+	text-decoration: none;
+}
+
+
+.skip-to-content-link:hover {
+	color: #FA4D56;
+}
 
 
 /*navbar*/
@@ -800,6 +812,10 @@ button {
 	.storygallery {
 		margin-top: 40%;
 	}
+
+	.skip-to-content-link {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 720px) {
@@ -923,6 +939,10 @@ button {
 		height: 3vh;
 		padding: 0 30px;
 		font-size: 5vmin;
+	}
+
+	.skip-to-content-link {
+		display: none;
 	}
 }
 
